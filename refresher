@@ -1,0 +1,30 @@
+
+function Refresh() {
+
+var Current_SSID = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" // your spreadsheet ID here
+  
+var dataSs = SpreadsheetApp.openById(Current_SSID);
+var dataSheet = dataSs.getSheets()[0]; // [0] gets Sheet1
+
+var outURL = dataSheet.getRange("a2");
+var URLxi = outURL.getValue();
+
+      var target = URLxi;
+
+      var targetSwitch = dataSheet.getRange("a2").activate();
+      targetSwitch;
+      var active = dataSheet.getActiveRange().getValue();
+
+var lookup = "=importXML('http://www.xkcd.com','//*')" // your formula here.
+
+var range = dataSheet.getRange("a1"); // sets up next item in A2
+var input = range.setFormula(lookup);
+input;
+
+      if (active === target) {} 
+      else {
+            do
+            {var randomWait = Math.floor(Math.random()*100+50); Utilities.sleep(randomWait);}
+            while (active =! target);
+           }
+}
