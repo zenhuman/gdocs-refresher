@@ -1,3 +1,20 @@
+/*
+I've used this beauty several times as Google Docs doesn't have an innate "Refresh" command.  
+The code here is for a WebApp, but can be easily modified for use in a spreadsheet-based script 
+by removing the first three lines of code and substituting:
+
+     var dataSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
+     
+Suppose "A1" to contain a formula (e.g. ImportXML from a website).
+Suppose "A2" to contain some output that depends on A1.
+
+This code works on the principle of cell "activation."  
+
+It compares the contents of a cell, set by the user, 
+with what GDocs considers the "active" contents of that cell.  
+
+So long as these two are not equal, it waits.
+*/
 
 function Refresh() {
 
